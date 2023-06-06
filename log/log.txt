@@ -1,0 +1,1351 @@
+----------------------------
+-- Resource limits : -------
+----------------------------
+{'CPU': 1, 'Memory': 4096}
+----------------------------
+----------------------------
+-- Environment Variables: --
+----------------------------
+courseraPartMaxScore=100
+PART_TITLE=Test part
+filename=assignment1-assignment1
+userId=111521101
+partId=Vf0Cr
+----------------------------
+AWS_EXECUTION_ENV=AWS_ECS_EC2
+CONDA_DIR=/opt/conda
+courseraPartMaxScore=100
+DEBIAN_FRONTEND=noninteractive
+DOCKER_STACKS_JUPYTER_CMD=lab
+ECS_CONTAINER_METADATA_FILE=/opt/ecs/metadata/02c767df-2f92-43d3-a239-1c486c2f4f4b/ecs-container-metadata.json
+ECS_CONTAINER_METADATA_URI=http://169.254.170.2/v3/3e89b747-094d-46f6-8d86-4ebd91d9a839
+ECS_CONTAINER_METADATA_URI_V4=http://169.254.170.2/v4/3e89b747-094d-46f6-8d86-4ebd91d9a839
+filename=assignment1-assignment1
+HOME=/home/jovyan
+HOSTNAME=ip-10-2-111-213.ec2.internal
+IMAGE_DIGEST=acbb72ac7b9c
+JUPYTERHUB_SINGLEUSER_APP=jupyter_server.serverapp.ServerApp
+LANG=en_US.UTF-8
+LANGUAGE=en_US.UTF-8
+LC_ALL=en_US.UTF-8
+MADS_NOTEBOOK_COMMIT=7919724
+MAMBA_NO_BANNER=1
+NB_GID=100
+NB_UID=1000
+NB_USER=jovyan
+OP=Read
+PACKAGE_VERSION=v1.15.060523
+partId=Vf0Cr
+PART_TITLE=Test part
+PATH=/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+PWD=/home/jovyan/autograder/assignments
+PYTHON_VERSION=
+REPO_NAME=etc_autograder
+SHELL=/bin/bash
+SHLVL=0
+userId=111521101
+_=/usr/bin/printenv
+XDG_CACHE_HOME=/home/jovyan/.cache/
+----------------------------
++ cp feedback.json /shared/feedback.json
++ rm -fr release
++ rm -fr submitted
++ rm -fr autograded
++ rm -fr gradebook.db
++ rm -fr grades.csv
++ [[ assignment1-assignment1 == *\b\u\n\d\l\e* ]]
++ echo '*** this is a one file submission ***'
+*** this is a one file submission ***
++ IFS=-
++ read assign_dir assign_file
++ mkdir -p submitted/test_case_1/assignment1/
++ cp /shared/submission/assignment1-assignment1 submitted/test_case_1/assignment1/assignment1.ipynb
++ echo '*** run grader and process feedback ***'
++ python grader.py assignment1 assignment1
+*** run grader and process feedback ***
+[INFO] Imported grader hooks from repo.
+[DEBUG] Using default logger
+Loaded nbgrader config: {'Validator': {'width': 200}}
+[INFO] Updated config with nbgrader_config.py
+[DEBUG] Using authenticator: NoAuthPlugin
+[CRITICAL] Unwritable directory, please contact your instructor: /usr/local/share/nbgrader/exchange
+[DEBUG] 
+[DEBUG] 
+[DEBUG] ----------------------------
+[DEBUG] -- NbGrader Config: --------
+[DEBUG] ----------------------------
+[DEBUG] nbgrader.__version__ = 0.8.2
+[DEBUG] c.NbGraderAPI.authenticator=<nbgrader.auth.base.Authenticator object at 0x7f03fa659d60>
+[DEBUG] c.NbGraderAPI.coursedir=<nbgrader.coursedir.CourseDirectory object at 0x7f03fa61e190>
+[DEBUG] c.NbGraderAPI.exchange=<nbgrader.exchange.exchange_factory.ExchangeFactory object at 0x7f03fa6592e0>
+[DEBUG] c.NbGraderAPI.log_level=10
+[DEBUG] c.NbGraderAPI.timestamp_format='%Y-%m-%d %H:%M:%S %Z'
+[DEBUG] c.NbGraderAPI.timezone='UTC'
+[DEBUG] c.CourseDirectory.assignment_id=''
+[DEBUG] c.CourseDirectory.autograded_directory='autograded'
+[DEBUG] c.CourseDirectory.course_id=''
+[DEBUG] c.CourseDirectory.db_url='sqlite:////home/jovyan/autograder/assignments/gradebook.db'
+[DEBUG] c.CourseDirectory.directory_structure='{nbgrader_step}/{student_id}/{assignment_id}'
+[DEBUG] c.CourseDirectory.feedback_directory='feedback'
+[DEBUG] c.CourseDirectory.groupshared=False
+[DEBUG] c.CourseDirectory.ignore=['.ipynb_checkpoints', '*.pyc', '__pycache__', 'feedback']
+[DEBUG] c.CourseDirectory.include=['*']
+[DEBUG] c.CourseDirectory.max_file_size=100000
+[DEBUG] c.CourseDirectory.notebook_id='*'
+[DEBUG] c.CourseDirectory.release_directory='release'
+[DEBUG] c.CourseDirectory.root='/home/jovyan/autograder/assignments'
+[DEBUG] c.CourseDirectory.solution_directory='solution'
+[DEBUG] c.CourseDirectory.source_directory='source'
+[DEBUG] c.CourseDirectory.student_id='*'
+[DEBUG] c.CourseDirectory.student_id_exclude=''
+[DEBUG] c.CourseDirectory.submitted_directory='submitted'
+[DEBUG] c.Autograde.assignments={}
+[DEBUG] c.Autograde.autograde_preprocessors=[<class 'nbgrader.preprocessors.execute.Execute'>, <class 'nbconvert.preprocessors.clearmetadata.ClearMetadataPreprocessor'>, <class 'nbgrader.preprocessors.limitoutput.LimitOutput'>, <class 'nbgrader.preprocessors.saveautogrades.SaveAutoGrades'>, <class 'nbgrader.preprocessors.latesubmissions.AssignLatePenalties'>, <class 'nbgrader.preprocessors.checkcellmetadata.CheckCellMetadata'>]
+[DEBUG] c.Autograde.coursedir=<nbgrader.coursedir.CourseDirectory object at 0x7f03fa61e190>
+[DEBUG] c.Autograde.create_student=True
+[DEBUG] c.Autograde.exclude_overwriting={}
+[DEBUG] TraitError: c.Autograde.exporter: The 'exporter' trait of an Autograde instance expected an Exporter, not the NoneType None.
+[DEBUG] c.Autograde.exporter_class=<class 'nbconvert.exporters.notebook.NotebookExporter'>
+[DEBUG] c.Autograde.force=True
+[DEBUG] c.Autograde.notebooks=[]
+[DEBUG] c.Autograde.permissions=444
+[DEBUG] c.Autograde.post_convert_hook=None
+[DEBUG] c.Autograde.pre_convert_hook=None
+[DEBUG] c.Autograde.preprocessors=[]
+[DEBUG] c.Autograde.sanitize_preprocessors=[<class 'nbgrader.preprocessors.clearoutput.ClearOutput'>, <class 'nbgrader.preprocessors.deduplicateids.DeduplicateIds'>, <class 'nbgrader.preprocessors.overwritekernelspec.OverwriteKernelspec'>, <class 'nbgrader.preprocessors.overwritecells.OverwriteCells'>, <class 'nbgrader.preprocessors.checkcellmetadata.CheckCellMetadata'>]
+[DEBUG] TraitError: c.Autograde.writer: The 'writer' trait of an Autograde instance expected a FilesWriter, not the NoneType None.
+[DEBUG] c.GenerateFeedback.assignments={}
+[DEBUG] c.GenerateFeedback.coursedir=<nbgrader.coursedir.CourseDirectory object at 0x7f03fa61e190>
+[DEBUG] TraitError: c.GenerateFeedback.exporter: The 'exporter' trait of a GenerateFeedback instance expected an Exporter, not the NoneType None.
+[DEBUG] c.GenerateFeedback.exporter_class=<class 'nbconvert.exporters.html.HTMLExporter'>
+[DEBUG] c.GenerateFeedback.force=True
+[DEBUG] c.GenerateFeedback.notebooks=[]
+[DEBUG] c.GenerateFeedback.permissions=644
+[DEBUG] c.GenerateFeedback.post_convert_hook=None
+[DEBUG] c.GenerateFeedback.pre_convert_hook=None
+[DEBUG] c.GenerateFeedback.preprocessors=['nbgrader.preprocessors.GetGrades', 'nbconvert.preprocessors.CSSHTMLHeaderPreprocessor', 'nbgrader.preprocessors.ClearHiddenTests', '__main__.StripHiddenTracebacks']
+[DEBUG] TraitError: c.GenerateFeedback.writer: The 'writer' trait of a GenerateFeedback instance expected a FilesWriter, not the NoneType None.
+[DEBUG] c.GenerateAssignment.assignments={}
+[DEBUG] c.GenerateAssignment.coursedir=<nbgrader.coursedir.CourseDirectory object at 0x7f03fa61e190>
+[DEBUG] c.GenerateAssignment.create_assignment=True
+[DEBUG] TraitError: c.GenerateAssignment.exporter: The 'exporter' trait of a GenerateAssignment instance expected an Exporter, not the NoneType None.
+[DEBUG] c.GenerateAssignment.exporter_class=<class 'nbconvert.exporters.notebook.NotebookExporter'>
+[DEBUG] c.GenerateAssignment.force=False
+[DEBUG] c.GenerateAssignment.no_database=False
+[DEBUG] c.GenerateAssignment.notebooks=[]
+[DEBUG] c.GenerateAssignment.permissions=644
+[DEBUG] c.GenerateAssignment.post_convert_hook=None
+[DEBUG] c.GenerateAssignment.pre_convert_hook=None
+[DEBUG] c.GenerateAssignment.preprocessors=[<class 'nbgrader.preprocessors.headerfooter.IncludeHeaderFooter'>, <class 'nbgrader.preprocessors.lockcells.LockCells'>, <class 'nbgrader.preprocessors.clearsolutions.ClearSolutions'>, <class 'nbgrader.preprocessors.clearoutput.ClearOutput'>, <class 'nbgrader.preprocessors.checkcellmetadata.CheckCellMetadata'>, <class 'nbgrader.preprocessors.computechecksums.ComputeChecksums'>, <class 'nbgrader.preprocessors.savecells.SaveCells'>, <class 'nbgrader.preprocessors.clearhiddentests.ClearHiddenTests'>, <class 'nbgrader.preprocessors.clearmarkingscheme.ClearMarkScheme'>, <class 'nbgrader.preprocessors.computechecksums.ComputeChecksums'>, <class 'nbgrader.preprocessors.checkcellmetadata.CheckCellMetadata'>]
+[DEBUG] TraitError: c.GenerateAssignment.writer: The 'writer' trait of a GenerateAssignment instance expected a FilesWriter, not the NoneType None.
+[DEBUG] c.Execute._display_id_map={}
+[DEBUG] c.Execute.allow_error_names=[]
+[DEBUG] c.Execute.allow_errors=True
+[DEBUG] c.Execute.default_language='ipython'
+[DEBUG] c.Execute.display_data_priority=['text/html', 'application/pdf', 'text/latex', 'image/svg+xml', 'image/png', 'image/jpeg', 'text/plain']
+[DEBUG] c.Execute.enabled=True
+[DEBUG] c.Execute.execute_retries=0
+[DEBUG] c.Execute.extra_arguments=[]
+[DEBUG] c.Execute.force_raise_errors=False
+[DEBUG] c.Execute.interrupt_on_timeout=True
+[DEBUG] c.Execute.iopub_timeout=4
+[DEBUG] c.Execute.ipython_hist_file=':memory:'
+[DEBUG] c.Execute.kernel_name=''
+[DEBUG] c.Execute.on_cell_complete=None
+[DEBUG] c.Execute.on_cell_error=None
+[DEBUG] c.Execute.on_cell_execute=None
+[DEBUG] c.Execute.on_cell_start=None
+[DEBUG] c.Execute.on_notebook_complete=None
+[DEBUG] c.Execute.on_notebook_error=None
+[DEBUG] c.Execute.on_notebook_start=None
+[DEBUG] c.Execute.raise_on_iopub_timeout=True
+[DEBUG] c.Execute.record_timing=True
+[DEBUG] c.Execute.resources={}
+[DEBUG] c.Execute.shell_timeout_interval=5
+[DEBUG] c.Execute.shutdown_kernel='graceful'
+[DEBUG] c.Execute.skip_cells_with_tag='skip-execution'
+[DEBUG] c.Execute.startup_timeout=60
+[DEBUG] c.Execute.store_widget_state=True
+[DEBUG] c.Execute.timeout=300
+[DEBUG] c.Execute.timeout_func=None
+[DEBUG] c.ExecutePreprocessor._display_id_map={}
+[DEBUG] c.ExecutePreprocessor.allow_error_names=[]
+[DEBUG] c.ExecutePreprocessor.allow_errors=False
+[DEBUG] c.ExecutePreprocessor.default_language='ipython'
+[DEBUG] c.ExecutePreprocessor.display_data_priority=['text/html', 'application/pdf', 'text/latex', 'image/svg+xml', 'image/png', 'image/jpeg', 'text/markdown', 'text/plain']
+[DEBUG] c.ExecutePreprocessor.enabled=False
+[DEBUG] c.ExecutePreprocessor.error_on_timeout=None
+[DEBUG] c.ExecutePreprocessor.extra_arguments=[]
+[DEBUG] c.ExecutePreprocessor.force_raise_errors=False
+[DEBUG] c.ExecutePreprocessor.interrupt_on_timeout=False
+[DEBUG] c.ExecutePreprocessor.iopub_timeout=4
+[DEBUG] c.ExecutePreprocessor.ipython_hist_file=':memory:'
+[DEBUG] c.ExecutePreprocessor.kernel_name=''
+[DEBUG] c.ExecutePreprocessor.on_cell_complete=None
+[DEBUG] c.ExecutePreprocessor.on_cell_error=None
+[DEBUG] c.ExecutePreprocessor.on_cell_execute=None
+[DEBUG] c.ExecutePreprocessor.on_cell_executed=None
+[DEBUG] c.ExecutePreprocessor.on_cell_start=None
+[DEBUG] c.ExecutePreprocessor.on_notebook_complete=None
+[DEBUG] c.ExecutePreprocessor.on_notebook_error=None
+[DEBUG] c.ExecutePreprocessor.on_notebook_start=None
+[DEBUG] c.ExecutePreprocessor.raise_on_iopub_timeout=False
+[DEBUG] c.ExecutePreprocessor.record_timing=True
+[DEBUG] c.ExecutePreprocessor.resources={}
+[DEBUG] c.ExecutePreprocessor.shell_timeout_interval=5
+[DEBUG] c.ExecutePreprocessor.shutdown_kernel='graceful'
+[DEBUG] c.ExecutePreprocessor.skip_cells_with_tag='skip-execution'
+[DEBUG] c.ExecutePreprocessor.startup_timeout=60
+[DEBUG] c.ExecutePreprocessor.store_widget_state=True
+[DEBUG] c.ExecutePreprocessor.timeout=300
+[DEBUG] c.ExecutePreprocessor.timeout_func=None
+[DEBUG] ----------------------------
+[DEBUG] 
+[DEBUG] 
+[DEBUG] ----------------------------
+[DEBUG] Calling setup()
+[DEBUG] ----------------------------
+[DEBUG] ----------------------------
+[DEBUG] 
+[DEBUG] 
+[DEBUG] ----------------------------
+[DEBUG] Calling generate_assignment()
+[DEBUG] ----------------------------
+[INFO] Copying /home/jovyan/autograder/assignments/source/./assignment1/assets/jupyter.png -> /home/jovyan/autograder/assignments/release/./assignment1/assets/jupyter.png
+[INFO] Updating/creating assignment 'assignment1': {}
+[INFO] Converting notebook /home/jovyan/autograder/assignments/source/./assignment1/assignment1.ipynb
+[DEBUG] Student: .
+[DEBUG] Assignment: assignment1
+[DEBUG] Notebook: assignment1
+[DEBUG] Applying preprocessor: IncludeHeaderFooter
+[DEBUG] Applying preprocessor: LockCells
+[DEBUG] Applying preprocessor: ClearSolutions
+[DEBUG] Applying preprocessor: ClearOutput
+[DEBUG] Applying preprocessor: CheckCellMetadata
+[DEBUG] Applying preprocessor: ComputeChecksums
+[DEBUG] Checksum for code cell 'squares' is c489054c37ce904027af8b23fd09e5b9
+[DEBUG] Checksum for code cell 'correct_squares' is 8f41dd0f9c8fd2da8e8708d73e506b3a
+[DEBUG] Checksum for code cell 'squares_invalid_input' is 23c2b667d3b60eff3be46eb3290a6b4a
+[DEBUG] Checksum for code cell 'sum_of_squares' is 166e1abc6621f93f8084ec312c49f757
+[DEBUG] Checksum for code cell 'correct_sum_of_squares_one' is a50921e8ef25e2f4144e1df189a9827a
+[DEBUG] Checksum for code cell 'correct_sum_of_squares' is 0a0e6635827b459040cd1f52b7b5c8ae
+[DEBUG] Checksum for code cell 'sum_of_squares_uses_squares' is 17c20d642d664b65246a3b50c4a766d1
+[DEBUG] Applying preprocessor: SaveCells
+[DEBUG] Creating notebook 'assignment1' in the database
+[DEBUG] Notebook kernelspec: {'display_name': 'Python 3 (ipykernel)', 'language': 'python', 'name': 'python3'}
+[DEBUG] Recorded grade cell GradeCell<assignment1/assignment1/correct_squares> into the gradebook
+[DEBUG] Recorded grade cell GradeCell<assignment1/assignment1/squares_invalid_input> into the gradebook
+[DEBUG] Recorded grade cell GradeCell<assignment1/assignment1/correct_sum_of_squares_one> into the gradebook
+[DEBUG] Recorded grade cell GradeCell<assignment1/assignment1/correct_sum_of_squares> into the gradebook
+[DEBUG] Recorded grade cell GradeCell<assignment1/assignment1/sum_of_squares_uses_squares> into the gradebook
+[DEBUG] Recorded solution cell SolutionCell<assignment1/assignment1/squares> into the gradebook
+[DEBUG] Recorded solution cell SolutionCell<assignment1/assignment1/sum_of_squares> into the gradebook
+[DEBUG] Recorded source cell SourceCell<assignment1/assignment1/jupyter> into the gradebook
+[DEBUG] Recorded source cell SourceCell<assignment1/assignment1/squares> into the gradebook
+[DEBUG] Recorded source cell SourceCell<assignment1/assignment1/correct_squares> into the gradebook
+[DEBUG] Recorded source cell SourceCell<assignment1/assignment1/squares_invalid_input> into the gradebook
+[DEBUG] Recorded source cell SourceCell<assignment1/assignment1/sum_of_squares> into the gradebook
+[DEBUG] Recorded source cell SourceCell<assignment1/assignment1/correct_sum_of_squares_one> into the gradebook
+[DEBUG] Recorded source cell SourceCell<assignment1/assignment1/correct_sum_of_squares> into the gradebook
+[DEBUG] Recorded source cell SourceCell<assignment1/assignment1/sum_of_squares_uses_squares> into the gradebook
+[DEBUG] Applying preprocessor: ClearHiddenTests
+[DEBUG] Applying preprocessor: ClearMarkScheme
+[DEBUG] Applying preprocessor: ComputeChecksums
+[DEBUG] Checksum for code cell 'squares' is c489054c37ce904027af8b23fd09e5b9
+[DEBUG] Checksum for code cell 'correct_squares' is 8f41dd0f9c8fd2da8e8708d73e506b3a
+[DEBUG] Checksum for code cell 'squares_invalid_input' is 23c2b667d3b60eff3be46eb3290a6b4a
+[DEBUG] Checksum for code cell 'sum_of_squares' is 166e1abc6621f93f8084ec312c49f757
+[DEBUG] Checksum for code cell 'correct_sum_of_squares_one' is a50921e8ef25e2f4144e1df189a9827a
+[DEBUG] Checksum for code cell 'correct_sum_of_squares' is 76ea0bb1892bb7e44dd6689ce8d6a8d8
+[DEBUG] Checksum for code cell 'sum_of_squares_uses_squares' is 17c20d642d664b65246a3b50c4a766d1
+[DEBUG] Applying preprocessor: CheckCellMetadata
+[INFO] Writing 6733 bytes to /home/jovyan/autograder/assignments/release/assignment1/assignment1.ipynb
+[INFO] Setting destination file permissions to 644
+[DEBUG] ----------------------------
+[DEBUG] 
+[DEBUG] 
+[DEBUG] ----------------------------
+[DEBUG] Calling print_tree('.')
+[DEBUG] ----------------------------
+[INFO] ./
+[INFO]      d9d69304 gradebook.db
+[INFO]      8be2df20 nbgrader_config.py
+[INFO]      a5d903ef feedback.json
+[INFO]      531894b9 grader.py
+[INFO]      04bf381f grader.sh
+[INFO]      5f7b1d24 grader_hooks.py
+[INFO]      6a84e1f5 mads-feedback.html.j2
+[INFO]      f1b537e2 scoreboard.py
+[INFO]     source/
+[INFO]         assignment1/
+[INFO]              e62855dd assignment1.ipynb
+[INFO]             assets/
+[INFO]                  7833531c jupyter.png
+[INFO]     submitted/
+[INFO]         test_case_1/
+[INFO]             assignment1/
+[INFO]                  667a70a4 assignment1.ipynb
+[INFO]     autograded/
+[INFO]     release/
+[INFO]         assignment1/
+[INFO]              667a70a4 assignment1.ipynb
+[INFO]             assets/
+[INFO]                  7833531c jupyter.png
+[DEBUG] ----------------------------
+[DEBUG] 
+[DEBUG] 
+[DEBUG] ----------------------------
+[DEBUG] Calling run_hook('pre_grade')
+[DEBUG] ----------------------------
+[INFO] Running pre_grade hook with args ['nb', 'nb_path', 'assignment', 'score']
+[INFO] ----------------------------
+[INFO] This logging happens inside pre_grade_hook
+[INFO] ----------------------------
+[INFO] Original submitted notebook content:
+[INFO] {
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "54357180eb986d05b0af250338fed58d",
+     "grade": false,
+     "grade_id": "jupyter",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false
+    }
+   },
+   "source": [
+    "For this problem set, we'll be using the Jupyter notebook:\n",
+    "\n",
+    "![](assets/jupyter.png)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "## Part A (2 points)\n",
+    "\n",
+    "Write a function that returns a list of numbers, such that $x_i=i^2$, for $1\\leq i \\leq n$. Make sure it handles the case where $n<1$ by raising a `ValueError`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "deletable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "c489054c37ce904027af8b23fd09e5b9",
+     "grade": false,
+     "grade_id": "squares",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true
+    }
+   },
+   "outputs": [],
+   "source": [
+    "def squares(n):\n",
+    "    \"\"\"Compute the squares of numbers from 1 to n, such that the \n",
+    "    ith element of the returned list equals i^2.\n",
+    "    \n",
+    "    \"\"\"\n",
+    "    # A comment\n",
+    "    # YOUR CODE HERE\n",
+    "    raise NotImplementedError()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Your function should print `[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]` for $n=10$. Check that it does:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "squares(10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "8f41dd0f9c8fd2da8e8708d73e506b3a",
+     "grade": true,
+     "grade_id": "correct_squares",
+     "locked": false,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false
+    }
+   },
+   "outputs": [],
+   "source": [
+    "\"\"\"Check that squares returns the correct output for several inputs\"\"\"\n",
+    "assert squares(1) == [1]\n",
+    "assert squares(2) == [1, 4]\n",
+    "assert squares(10) == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n",
+    "assert squares(11) == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "23c2b667d3b60eff3be46eb3290a6b4a",
+     "grade": true,
+     "grade_id": "squares_invalid_input",
+     "locked": false,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false
+    }
+   },
+   "outputs": [],
+   "source": [
+    "\"\"\"Check that squares raises an error for invalid inputs\"\"\"\n",
+    "try:\n",
+    "    squares(0)\n",
+    "except ValueError:\n",
+    "    pass\n",
+    "else:\n",
+    "    raise AssertionError(\"did not raise\")\n",
+    "\n",
+    "try:\n",
+    "    squares(-4)\n",
+    "except ValueError:\n",
+    "    pass\n",
+    "else:\n",
+    "    raise AssertionError(\"did not raise\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "\n",
+    "## Part B (3 point)\n",
+    "\n",
+    "Using your `squares` function, write a function that computes the sum of the squares of the numbers from 1 to $n$. Your function should call the `squares` function -- it should NOT reimplement its functionality."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "deletable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "166e1abc6621f93f8084ec312c49f757",
+     "grade": false,
+     "grade_id": "sum_of_squares",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true
+    }
+   },
+   "outputs": [],
+   "source": [
+    "def sum_of_squares(n):\n",
+    "    \"\"\"Compute the sum of the squares of numbers from 1 to n.\"\"\"\n",
+    "    # YOUR CODE HERE\n",
+    "    raise NotImplementedError()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The sum of squares from 1 to 10 should be 385. Verify that this is the answer you get:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "sum_of_squares(10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "a50921e8ef25e2f4144e1df189a9827a",
+     "grade": true,
+     "grade_id": "correct_sum_of_squares_one",
+     "locked": false,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false
+    }
+   },
+   "outputs": [],
+   "source": [
+    "\"\"\"Check that sum_of_squares returns the correct answer for various inputs.\"\"\"\n",
+    "assert sum_of_squares(1) == 1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "76ea0bb1892bb7e44dd6689ce8d6a8d8",
+     "grade": true,
+     "grade_id": "correct_sum_of_squares",
+     "locked": false,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false
+    }
+   },
+   "outputs": [],
+   "source": [
+    "assert sum_of_squares(2) == 5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "17c20d642d664b65246a3b50c4a766d1",
+     "grade": true,
+     "grade_id": "sum_of_squares_uses_squares",
+     "locked": false,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false
+    }
+   },
+   "outputs": [],
+   "source": [
+    "\"\"\"Check that sum_of_squares relies on squares.\"\"\"\n",
+    "orig_squares = squares\n",
+    "del squares\n",
+    "try:\n",
+    "    sum_of_squares(1)\n",
+    "except NameError:\n",
+    "    pass\n",
+    "else:\n",
+    "    raise AssertionError(\"sum_of_squares does not use squares\")\n",
+    "finally:\n",
+    "    squares = orig_squares"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
+Arguments received by pre_grade_hook:
+nb_path: /home/jovyan/autograder/assignments/submitted/test_case_1/assignment1/assignment1.ipynb
+assignment: assignment1
+score: 0.0
+Ungraded submitted notebook looks like:
+{'cells': [{'cell_type': 'markdown', 'metadata': {'deletable': False, 'editable': False, 'nbgrader': {'cell_type': 'markdown', 'checksum': '54357180eb986d05b0af250338fed58d', 'grade': False, 'grade_id': 'jupyter', 'locked': True, 'schema_version': 3, 'solution': False}}, 'source': "For this problem set, we'll be using the Jupyter notebook:\n\n![](assets/jupyter.png)"}, {'cell_type': 'markdown', 'metadata': {}, 'source': '---\n## Part A (2 points)\n\nWrite a function that returns a list of numbers, such that $x_i=i^2$, for $1\\leq i \\leq n$. Make sure it handles the case where $n<1$ by raising a `ValueError`.'}, {'cell_type': 'code', 'execution_count': None, 'metadata': {'deletable': False, 'nbgrader': {'cell_type': 'code', 'checksum': 'c489054c37ce904027af8b23fd09e5b9', 'grade': False, 'grade_id': 'squares', 'locked': False, 'schema_version': 3, 'solution': True}}, 'outputs': [], 'source': 'def squares(n):\n    """Compute the squares of numbers from 1 to n, such that the \n    ith element of the returned list equals i^2.\n    \n    """\n    # A comment\n    # YOUR CODE HERE\n    raise NotImplementedError()'}, {'cell_type': 'markdown', 'metadata': {}, 'source': 'Your function should print `[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]` for $n=10$. Check that it does:'}, {'cell_type': 'code', 'execution_count': None, 'metadata': {}, 'outputs': [], 'source': 'squares(10)'}, {'cell_type': 'code', 'execution_count': None, 'metadata': {'deletable': False, 'editable': False, 'nbgrader': {'cell_type': 'code', 'checksum': '8f41dd0f9c8fd2da8e8708d73e506b3a', 'grade': True, 'grade_id': 'correct_squares', 'locked': False, 'points': 1, 'schema_version': 3, 'solution': False}}, 'outputs': [], 'source': '"""Check that squares returns the correct output for several inputs"""\nassert squares(1) == [1]\nassert squares(2) == [1, 4]\nassert squares(10) == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\nassert squares(11) == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121]'}, {'cell_type': 'code', 'execution_count': None, 'metadata': {'deletable': False, 'editable': False, 'nbgrader': {'cell_type': 'code', 'checksum': '23c2b667d3b60eff3be46eb3290a6b4a', 'grade': True, 'grade_id': 'squares_invalid_input', 'locked': False, 'points': 1, 'schema_version': 3, 'solution': False}}, 'outputs': [], 'source': '"""Check that squares raises an error for invalid inputs"""\ntry:\n    squares(0)\nexcept ValueError:\n    pass\nelse:\n    raise AssertionError("did not raise")\n\ntry:\n    squares(-4)\nexcept ValueError:\n    pass\nelse:\n    raise AssertionError("did not raise")'}, {'cell_type': 'markdown', 'metadata': {}, 'source': '---\n\n## Part B (3 point)\n\nUsing your `squares` function, write a function that computes the sum of the squares of the numbers from 1 to $n$. Your function should call the `squares` function -- it should NOT reimplement its functionality.'}, {'cell_type': 'code', 'execution_count': None, 'metadata': {'deletable': False, 'nbgrader': {'cell_type': 'code', 'checksum': '166e1abc6621f93f8084ec312c49f757', 'grade': False, 'grade_id': 'sum_of_squares', 'locked': False, 'schema_version': 3, 'solution': True}}, 'outputs': [], 'source': 'def sum_of_squares(n):\n    """Compute the sum of the squares of numbers from 1 to n."""\n    # YOUR CODE HERE\n    raise NotImplementedError()'}, {'cell_type': 'markdown', 'metadata': {}, 'source': 'The sum of squares from 1 to 10 should be 385. Verify that this is the answer you get:'}, {'cell_type': 'code', 'execution_count': None, 'metadata': {}, 'outputs': [], 'source': 'sum_of_squares(10)'}, {'cell_type': 'code', 'execution_count': None, 'metadata': {'deletable': False, 'editable': False, 'nbgrader': {'cell_type': 'code', 'checksum': 'a50921e8ef25e2f4144e1df189a9827a', 'grade': True, 'grade_id': 'correct_sum_of_squares_one', 'locked': False, 'points': 1, 'schema_version': 3, 'solution': False}}, 'outputs': [], 'source': '"""Check that sum_of_squares returns the correct answer for various inputs."""\nassert sum_of_squares(1) == 1'}, {'cell_type': 'code', 'execution_count': None, 'metadata': {'deletable': False, 'editable': False, 'nbgrader': {'cell_type': 'code', 'checksum': '76ea0bb1892bb7e44dd6689ce8d6a8d8', 'grade': True, 'grade_id': 'correct_sum_of_squares', 'locked': False, 'points': 1, 'schema_version': 3, 'solution': False}}, 'outputs': [], 'source': 'assert sum_of_squares(2) == 5'}, {'cell_type': 'code', 'execution_count': None, 'metadata': {'deletable': False, 'editable': False, 'nbgrader': {'cell_type': 'code', 'checksum': '17c20d642d664b65246a3b50c4a766d1', 'grade': True, 'grade_id': 'sum_of_squares_uses_squares', 'locked': False, 'points': 1, 'schema_version': 3, 'solution': False}}, 'outputs': [], 'source': '"""Check that sum_of_squares relies on squares."""\norig_squares = squares\ndel squares\ntry:\n    sum_of_squares(1)\nexcept NameError:\n    pass\nelse:\n    raise AssertionError("sum_of_squares does not use squares")\nfinally:\n    squares = orig_squares'}], 'metadata': {'kernelspec': {'display_name': 'Python 3 (ipykernel)', 'language': 'python', 'name': 'python3'}, 'language_info': {'codemirror_mode': {'name': 'ipython', 'version': 3}, 'file_extension': '.py', 'mimetype': 'text/x-python', 'name': 'python', 'nbconvert_exporter': 'python', 'pygments_lexer': 'ipython3', 'version': '3.9.13'}}, 'nbformat': 4, 'nbformat_minor': 4}
+[INFO] Hook pre_grade completed successfully!
+[DEBUG] ----------------------------
+[DEBUG] 
+[DEBUG] 
+[DEBUG] ----------------------------
+[DEBUG] Calling autograde()
+[DEBUG] ----------------------------
+[INFO] Creating/updating student with ID 'test_case_1': {}
+[INFO] Overwriting files with master versions from the source directory
+[INFO] Copying /home/jovyan/autograder/assignments/source/./assignment1/assets/jupyter.png -> /home/jovyan/autograder/assignments/autograded/test_case_1/assignment1/assets/jupyter.png
+[INFO] Sanitizing /home/jovyan/autograder/assignments/submitted/test_case_1/assignment1/assignment1.ipynb
+[INFO] Converting notebook /home/jovyan/autograder/assignments/submitted/test_case_1/assignment1/assignment1.ipynb
+[DEBUG] Student: test_case_1
+[DEBUG] Assignment: assignment1
+[DEBUG] Notebook: assignment1
+[DEBUG] Applying preprocessor: ClearOutput
+[DEBUG] Applying preprocessor: DeduplicateIds
+[DEBUG] Applying preprocessor: OverwriteKernelspec
+[DEBUG] Source notebook kernelspec: {'display_name': 'Python 3 (ipykernel)', 'language': 'python', 'name': 'python3'}
+[DEBUG] Submitted notebook kernelspec: {'display_name': 'Python 3 (ipykernel)', 'language': 'python', 'name': 'python3'}
+[DEBUG] Overwriting submitted notebook kernelspec: {'display_name': 'Python 3 (ipykernel)', 'language': 'python', 'name': 'python3'}
+[DEBUG] Applying preprocessor: OverwriteCells
+[WARNING] Attribute 'checksum' for cell correct_sum_of_squares has changed! (should be: 0a0e6635827b459040cd1f52b7b5c8ae, got: 76ea0bb1892bb7e44dd6689ce8d6a8d8)
+[DEBUG] Applying preprocessor: CheckCellMetadata
+[INFO] Writing 6879 bytes to /home/jovyan/autograder/assignments/autograded/test_case_1/assignment1/assignment1.ipynb
+[INFO] Autograding /home/jovyan/autograder/assignments/autograded/test_case_1/assignment1/assignment1.ipynb
+[INFO] Converting notebook /home/jovyan/autograder/assignments/autograded/test_case_1/assignment1/assignment1.ipynb
+[DEBUG] Student: test_case_1
+[DEBUG] Assignment: assignment1
+[DEBUG] Notebook: assignment1
+[DEBUG] Applying preprocessor: Execute
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Instantiating kernel 'Python 3 (ipykernel)' with kernel provisioner: local-provisioner
+[DEBUG] Starting kernel: ['/opt/conda/bin/python', '-m', 'ipykernel_launcher', '-f', '/tmp/tmp7f76buq2.json', '--HistoryManager.hist_file=:memory:']
+[DEBUG] Connecting to: tcp://127.0.0.1:46185
+[DEBUG] Using selector: EpollSelector
+[DEBUG] connecting iopub channel to tcp://127.0.0.1:50171
+[DEBUG] Connecting to: tcp://127.0.0.1:50171
+[DEBUG] connecting shell channel to tcp://127.0.0.1:59991
+[DEBUG] Connecting to: tcp://127.0.0.1:59991
+[DEBUG] connecting stdin channel to tcp://127.0.0.1:50863
+[DEBUG] Connecting to: tcp://127.0.0.1:50863
+[DEBUG] connecting heartbeat channel to tcp://127.0.0.1:38779
+[DEBUG] connecting control channel to tcp://127.0.0.1:46185
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Connecting to: tcp://127.0.0.1:46185
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Skipping non-executing cell 0
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Skipping non-executing cell 1
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Executing cell:
+def squares(n):
+    """Compute the squares of numbers from 1 to n, such that the 
+    ith element of the returned list equals i^2.
+    
+    """
+    # A comment
+    # YOUR CODE HERE
+    raise NotImplementedError()
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'busy'}
+[DEBUG] msg_type: execute_input
+[DEBUG] content: {'code': 'def squares(n):\n    """Compute the squares of numbers from 1 to n, such that the \n    ith element of the returned list equals i^2.\n    \n    """\n    # A comment\n    # YOUR CODE HERE\n    raise NotImplementedError()', 'execution_count': 1}
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'idle'}
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Skipping non-executing cell 3
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Executing cell:
+squares(10)
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'busy'}
+[DEBUG] msg_type: execute_input
+[DEBUG] content: {'code': 'squares(10)', 'execution_count': 2}
+[DEBUG] msg_type: error
+[DEBUG] content: {'traceback': ['\x1b[0;31m---------------------------------------------------------------------------\x1b[0m', '\x1b[0;31mNotImplementedError\x1b[0m                       Traceback (most recent call last)', 'Cell \x1b[0;32mIn [2], line 1\x1b[0m\n\x1b[0;32m----> 1\x1b[0m \x1b[43msquares\x1b[49m\x1b[43m(\x1b[49m\x1b[38;5;241;43m10\x1b[39;49m\x1b[43m)\x1b[49m\n', 'Cell \x1b[0;32mIn [1], line 8\x1b[0m, in \x1b[0;36msquares\x1b[0;34m(n)\x1b[0m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;124;03m"""Compute the squares of numbers from 1 to n, such that the \x1b[39;00m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;124;03mith element of the returned list equals i^2.\x1b[39;00m\n\x1b[1;32m      4\x1b[0m \x1b[38;5;124;03m\x1b[39;00m\n\x1b[1;32m      5\x1b[0m \x1b[38;5;124;03m"""\x1b[39;00m\n\x1b[1;32m      6\x1b[0m \x1b[38;5;66;03m# A comment\x1b[39;00m\n\x1b[1;32m      7\x1b[0m \x1b[38;5;66;03m# YOUR CODE HERE\x1b[39;00m\n\x1b[0;32m----> 8\x1b[0m \x1b[38;5;28;01mraise\x1b[39;00m \x1b[38;5;167;01mNotImplementedError\x1b[39;00m()\n', '\x1b[0;31mNotImplementedError\x1b[0m: '], 'ename': 'NotImplementedError', 'evalue': ''}
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'idle'}
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Executing cell:
+"""Check that squares returns the correct output for several inputs"""
+assert squares(1) == [1]
+assert squares(2) == [1, 4]
+assert squares(10) == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+assert squares(11) == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121]
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'busy'}
+[DEBUG] msg_type: execute_input
+[DEBUG] content: {'code': '"""Check that squares returns the correct output for several inputs"""\nassert squares(1) == [1]\nassert squares(2) == [1, 4]\nassert squares(10) == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\nassert squares(11) == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121]', 'execution_count': 3}
+[DEBUG] msg_type: error
+[DEBUG] content: {'traceback': ['\x1b[0;31m---------------------------------------------------------------------------\x1b[0m', '\x1b[0;31mNotImplementedError\x1b[0m                       Traceback (most recent call last)', 'Cell \x1b[0;32mIn [3], line 2\x1b[0m\n\x1b[1;32m      1\x1b[0m \x1b[38;5;124;03m"""Check that squares returns the correct output for several inputs"""\x1b[39;00m\n\x1b[0;32m----> 2\x1b[0m \x1b[38;5;28;01massert\x1b[39;00m \x1b[43msquares\x1b[49m\x1b[43m(\x1b[49m\x1b[38;5;241;43m1\x1b[39;49m\x1b[43m)\x1b[49m \x1b[38;5;241m==\x1b[39m [\x1b[38;5;241m1\x1b[39m]\n\x1b[1;32m      3\x1b[0m \x1b[38;5;28;01massert\x1b[39;00m squares(\x1b[38;5;241m2\x1b[39m) \x1b[38;5;241m==\x1b[39m [\x1b[38;5;241m1\x1b[39m, \x1b[38;5;241m4\x1b[39m]\n\x1b[1;32m      4\x1b[0m \x1b[38;5;28;01massert\x1b[39;00m squares(\x1b[38;5;241m10\x1b[39m) \x1b[38;5;241m==\x1b[39m [\x1b[38;5;241m1\x1b[39m, \x1b[38;5;241m4\x1b[39m, \x1b[38;5;241m9\x1b[39m, \x1b[38;5;241m16\x1b[39m, \x1b[38;5;241m25\x1b[39m, \x1b[38;5;241m36\x1b[39m, \x1b[38;5;241m49\x1b[39m, \x1b[38;5;241m64\x1b[39m, \x1b[38;5;241m81\x1b[39m, \x1b[38;5;241m100\x1b[39m]\n', 'Cell \x1b[0;32mIn [1], line 8\x1b[0m, in \x1b[0;36msquares\x1b[0;34m(n)\x1b[0m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;124;03m"""Compute the squares of numbers from 1 to n, such that the \x1b[39;00m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;124;03mith element of the returned list equals i^2.\x1b[39;00m\n\x1b[1;32m      4\x1b[0m \x1b[38;5;124;03m\x1b[39;00m\n\x1b[1;32m      5\x1b[0m \x1b[38;5;124;03m"""\x1b[39;00m\n\x1b[1;32m      6\x1b[0m \x1b[38;5;66;03m# A comment\x1b[39;00m\n\x1b[1;32m      7\x1b[0m \x1b[38;5;66;03m# YOUR CODE HERE\x1b[39;00m\n\x1b[0;32m----> 8\x1b[0m \x1b[38;5;28;01mraise\x1b[39;00m \x1b[38;5;167;01mNotImplementedError\x1b[39;00m()\n', '\x1b[0;31mNotImplementedError\x1b[0m: '], 'ename': 'NotImplementedError', 'evalue': ''}
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'idle'}
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Executing cell:
+"""Check that squares raises an error for invalid inputs"""
+try:
+    squares(0)
+except ValueError:
+    pass
+else:
+    raise AssertionError("did not raise")
+try:
+    squares(-4)
+except ValueError:
+    pass
+else:
+    raise AssertionError("did not raise")
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'busy'}
+[DEBUG] msg_type: execute_input
+[DEBUG] content: {'code': '"""Check that squares raises an error for invalid inputs"""\ntry:\n    squares(0)\nexcept ValueError:\n    pass\nelse:\n    raise AssertionError("did not raise")\n\ntry:\n    squares(-4)\nexcept ValueError:\n    pass\nelse:\n    raise AssertionError("did not raise")', 'execution_count': 4}
+[DEBUG] msg_type: error
+[DEBUG] content: {'traceback': ['\x1b[0;31m---------------------------------------------------------------------------\x1b[0m', '\x1b[0;31mNotImplementedError\x1b[0m                       Traceback (most recent call last)', 'Cell \x1b[0;32mIn [4], line 3\x1b[0m\n\x1b[1;32m      1\x1b[0m \x1b[38;5;124;03m"""Check that squares raises an error for invalid inputs"""\x1b[39;00m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;28;01mtry\x1b[39;00m:\n\x1b[0;32m----> 3\x1b[0m     \x1b[43msquares\x1b[49m\x1b[43m(\x1b[49m\x1b[38;5;241;43m0\x1b[39;49m\x1b[43m)\x1b[49m\n\x1b[1;32m      4\x1b[0m \x1b[38;5;28;01mexcept\x1b[39;00m \x1b[38;5;167;01mValueError\x1b[39;00m:\n\x1b[1;32m      5\x1b[0m     \x1b[38;5;28;01mpass\x1b[39;00m\n', 'Cell \x1b[0;32mIn [1], line 8\x1b[0m, in \x1b[0;36msquares\x1b[0;34m(n)\x1b[0m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;124;03m"""Compute the squares of numbers from 1 to n, such that the \x1b[39;00m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;124;03mith element of the returned list equals i^2.\x1b[39;00m\n\x1b[1;32m      4\x1b[0m \x1b[38;5;124;03m\x1b[39;00m\n\x1b[1;32m      5\x1b[0m \x1b[38;5;124;03m"""\x1b[39;00m\n\x1b[1;32m      6\x1b[0m \x1b[38;5;66;03m# A comment\x1b[39;00m\n\x1b[1;32m      7\x1b[0m \x1b[38;5;66;03m# YOUR CODE HERE\x1b[39;00m\n\x1b[0;32m----> 8\x1b[0m \x1b[38;5;28;01mraise\x1b[39;00m \x1b[38;5;167;01mNotImplementedError\x1b[39;00m()\n', '\x1b[0;31mNotImplementedError\x1b[0m: '], 'ename': 'NotImplementedError', 'evalue': ''}
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'idle'}
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Skipping non-executing cell 7
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Executing cell:
+def sum_of_squares(n):
+    """Compute the sum of the squares of numbers from 1 to n."""
+    # YOUR CODE HERE
+    raise NotImplementedError()
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'busy'}
+[DEBUG] msg_type: execute_input
+[DEBUG] content: {'code': 'def sum_of_squares(n):\n    """Compute the sum of the squares of numbers from 1 to n."""\n    # YOUR CODE HERE\n    raise NotImplementedError()', 'execution_count': 5}
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'idle'}
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Skipping non-executing cell 9
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Executing cell:
+sum_of_squares(10)
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'busy'}
+[DEBUG] msg_type: execute_input
+[DEBUG] content: {'code': 'sum_of_squares(10)', 'execution_count': 6}
+[DEBUG] msg_type: error
+[DEBUG] content: {'traceback': ['\x1b[0;31m---------------------------------------------------------------------------\x1b[0m', '\x1b[0;31mNotImplementedError\x1b[0m                       Traceback (most recent call last)', 'Cell \x1b[0;32mIn [6], line 1\x1b[0m\n\x1b[0;32m----> 1\x1b[0m \x1b[43msum_of_squares\x1b[49m\x1b[43m(\x1b[49m\x1b[38;5;241;43m10\x1b[39;49m\x1b[43m)\x1b[49m\n', 'Cell \x1b[0;32mIn [5], line 4\x1b[0m, in \x1b[0;36msum_of_squares\x1b[0;34m(n)\x1b[0m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;124;03m"""Compute the sum of the squares of numbers from 1 to n."""\x1b[39;00m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;66;03m# YOUR CODE HERE\x1b[39;00m\n\x1b[0;32m----> 4\x1b[0m \x1b[38;5;28;01mraise\x1b[39;00m \x1b[38;5;167;01mNotImplementedError\x1b[39;00m()\n', '\x1b[0;31mNotImplementedError\x1b[0m: '], 'ename': 'NotImplementedError', 'evalue': ''}
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'idle'}
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Executing cell:
+"""Check that sum_of_squares returns the correct answer for various inputs."""
+assert sum_of_squares(1) == 1
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'busy'}
+[DEBUG] msg_type: execute_input
+[DEBUG] content: {'code': '"""Check that sum_of_squares returns the correct answer for various inputs."""\nassert sum_of_squares(1) == 1', 'execution_count': 7}
+[DEBUG] msg_type: error
+[DEBUG] content: {'traceback': ['\x1b[0;31m---------------------------------------------------------------------------\x1b[0m', '\x1b[0;31mNotImplementedError\x1b[0m                       Traceback (most recent call last)', 'Cell \x1b[0;32mIn [7], line 2\x1b[0m\n\x1b[1;32m      1\x1b[0m \x1b[38;5;124;03m"""Check that sum_of_squares returns the correct answer for various inputs."""\x1b[39;00m\n\x1b[0;32m----> 2\x1b[0m \x1b[38;5;28;01massert\x1b[39;00m \x1b[43msum_of_squares\x1b[49m\x1b[43m(\x1b[49m\x1b[38;5;241;43m1\x1b[39;49m\x1b[43m)\x1b[49m \x1b[38;5;241m==\x1b[39m \x1b[38;5;241m1\x1b[39m\n', 'Cell \x1b[0;32mIn [5], line 4\x1b[0m, in \x1b[0;36msum_of_squares\x1b[0;34m(n)\x1b[0m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;124;03m"""Compute the sum of the squares of numbers from 1 to n."""\x1b[39;00m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;66;03m# YOUR CODE HERE\x1b[39;00m\n\x1b[0;32m----> 4\x1b[0m \x1b[38;5;28;01mraise\x1b[39;00m \x1b[38;5;167;01mNotImplementedError\x1b[39;00m()\n', '\x1b[0;31mNotImplementedError\x1b[0m: '], 'ename': 'NotImplementedError', 'evalue': ''}
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'idle'}
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Executing cell:
+assert sum_of_squares(2) == 5
+### BEGIN HIDDEN TESTS
+assert sum_of_squares(10) == 385
+assert sum_of_squares(11) == 506
+### END HIDDEN TESTS
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'busy'}
+[DEBUG] msg_type: execute_input
+[DEBUG] content: {'code': 'assert sum_of_squares(2) == 5\n### BEGIN HIDDEN TESTS\nassert sum_of_squares(10) == 385\nassert sum_of_squares(11) == 506\n### END HIDDEN TESTS', 'execution_count': 8}
+[DEBUG] msg_type: error
+[DEBUG] content: {'traceback': ['\x1b[0;31m---------------------------------------------------------------------------\x1b[0m', '\x1b[0;31mNotImplementedError\x1b[0m                       Traceback (most recent call last)', 'Cell \x1b[0;32mIn [8], line 1\x1b[0m\n\x1b[0;32m----> 1\x1b[0m \x1b[38;5;28;01massert\x1b[39;00m \x1b[43msum_of_squares\x1b[49m\x1b[43m(\x1b[49m\x1b[38;5;241;43m2\x1b[39;49m\x1b[43m)\x1b[49m \x1b[38;5;241m==\x1b[39m \x1b[38;5;241m5\x1b[39m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;66;03m### BEGIN HIDDEN TESTS\x1b[39;00m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;28;01massert\x1b[39;00m sum_of_squares(\x1b[38;5;241m10\x1b[39m) \x1b[38;5;241m==\x1b[39m \x1b[38;5;241m385\x1b[39m\n', 'Cell \x1b[0;32mIn [5], line 4\x1b[0m, in \x1b[0;36msum_of_squares\x1b[0;34m(n)\x1b[0m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;124;03m"""Compute the sum of the squares of numbers from 1 to n."""\x1b[39;00m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;66;03m# YOUR CODE HERE\x1b[39;00m\n\x1b[0;32m----> 4\x1b[0m \x1b[38;5;28;01mraise\x1b[39;00m \x1b[38;5;167;01mNotImplementedError\x1b[39;00m()\n', '\x1b[0;31mNotImplementedError\x1b[0m: '], 'ename': 'NotImplementedError', 'evalue': ''}
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'idle'}
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Executing cell:
+"""Check that sum_of_squares relies on squares."""
+orig_squares = squares
+del squares
+try:
+    sum_of_squares(1)
+except NameError:
+    pass
+else:
+    raise AssertionError("sum_of_squares does not use squares")
+finally:
+    squares = orig_squares
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'busy'}
+[DEBUG] msg_type: execute_input
+[DEBUG] content: {'code': '"""Check that sum_of_squares relies on squares."""\norig_squares = squares\ndel squares\ntry:\n    sum_of_squares(1)\nexcept NameError:\n    pass\nelse:\n    raise AssertionError("sum_of_squares does not use squares")\nfinally:\n    squares = orig_squares', 'execution_count': 9}
+[DEBUG] msg_type: error
+[DEBUG] content: {'traceback': ['\x1b[0;31m---------------------------------------------------------------------------\x1b[0m', '\x1b[0;31mNotImplementedError\x1b[0m                       Traceback (most recent call last)', 'Cell \x1b[0;32mIn [9], line 5\x1b[0m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;28;01mdel\x1b[39;00m squares\n\x1b[1;32m      4\x1b[0m \x1b[38;5;28;01mtry\x1b[39;00m:\n\x1b[0;32m----> 5\x1b[0m     \x1b[43msum_of_squares\x1b[49m\x1b[43m(\x1b[49m\x1b[38;5;241;43m1\x1b[39;49m\x1b[43m)\x1b[49m\n\x1b[1;32m      6\x1b[0m \x1b[38;5;28;01mexcept\x1b[39;00m \x1b[38;5;167;01mNameError\x1b[39;00m:\n\x1b[1;32m      7\x1b[0m     \x1b[38;5;28;01mpass\x1b[39;00m\n', 'Cell \x1b[0;32mIn [5], line 4\x1b[0m, in \x1b[0;36msum_of_squares\x1b[0;34m(n)\x1b[0m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;124;03m"""Compute the sum of the squares of numbers from 1 to n."""\x1b[39;00m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;66;03m# YOUR CODE HERE\x1b[39;00m\n\x1b[0;32m----> 4\x1b[0m \x1b[38;5;28;01mraise\x1b[39;00m \x1b[38;5;167;01mNotImplementedError\x1b[39;00m()\n', '\x1b[0;31mNotImplementedError\x1b[0m: '], 'ename': 'NotImplementedError', 'evalue': ''}
+[DEBUG] msg_type: status
+[DEBUG] content: {'execution_state': 'idle'}
+[DEBUG] Using selector: EpollSelector
+[DEBUG] Destroying zmq context for <jupyter_client.blocking.client.BlockingKernelClient object at 0x7f03f47af820>
+[DEBUG] Applying preprocessor: LimitOutput
+[DEBUG] Applying preprocessor: SaveAutoGrades
+[DEBUG] Applying preprocessor: AssignLatePenalties
+[DEBUG] Applying preprocessor: CheckCellMetadata
+[INFO] Writing 19347 bytes to /home/jovyan/autograder/assignments/autograded/test_case_1/assignment1/assignment1.ipynb
+[INFO] Setting destination file permissions to 444
+[INFO] Grading completed with score 0.0
+[DEBUG] ----------------------------
+[DEBUG] 
+[DEBUG] 
+[DEBUG] ----------------------------
+[DEBUG] Calling run_hook('post_grade')
+[DEBUG] ----------------------------
+[INFO] Running post_grade hook with args ['nb', 'nb_path', 'assignment', 'score']
+[INFO] ----------------------------
+[INFO] This logging happens inside post_grade_hook
+[INFO] ----------------------------
+[INFO] Original submitted notebook content:
+[INFO] {
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "nbgrader": {
+     "cell_type": "markdown",
+     "checksum": "54357180eb986d05b0af250338fed58d",
+     "grade": false,
+     "grade_id": "jupyter",
+     "locked": true,
+     "schema_version": 3,
+     "solution": false
+    }
+   },
+   "source": [
+    "For this problem set, we'll be using the Jupyter notebook:\n",
+    "\n",
+    "![](assets/jupyter.png)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "## Part A (2 points)\n",
+    "\n",
+    "Write a function that returns a list of numbers, such that $x_i=i^2$, for $1\\leq i \\leq n$. Make sure it handles the case where $n<1$ by raising a `ValueError`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "deletable": false,
+    "execution": {
+     "iopub.execute_input": "2023-06-05T14:12:59.515726Z",
+     "iopub.status.busy": "2023-06-05T14:12:59.515423Z",
+     "iopub.status.idle": "2023-06-05T14:12:59.522582Z",
+     "shell.execute_reply": "2023-06-05T14:12:59.521931Z"
+    },
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "c489054c37ce904027af8b23fd09e5b9",
+     "grade": false,
+     "grade_id": "squares",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true
+    }
+   },
+   "outputs": [],
+   "source": [
+    "def squares(n):\n",
+    "    \"\"\"Compute the squares of numbers from 1 to n, such that the \n",
+    "    ith element of the returned list equals i^2.\n",
+    "    \n",
+    "    \"\"\"\n",
+    "    # A comment\n",
+    "    # YOUR CODE HERE\n",
+    "    raise NotImplementedError()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Your function should print `[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]` for $n=10$. Check that it does:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2023-06-05T14:12:59.526133Z",
+     "iopub.status.busy": "2023-06-05T14:12:59.525830Z",
+     "iopub.status.idle": "2023-06-05T14:13:00.021007Z",
+     "shell.execute_reply": "2023-06-05T14:13:00.020272Z"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NotImplementedError",
+     "evalue": "",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNotImplementedError\u001b[0m                       Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn [2], line 1\u001b[0m\n\u001b[0;32m----> 1\u001b[0m \u001b[43msquares\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m10\u001b[39;49m\u001b[43m)\u001b[49m\n",
+      "Cell \u001b[0;32mIn [1], line 8\u001b[0m, in \u001b[0;36msquares\u001b[0;34m(n)\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[38;5;124;03m\"\"\"Compute the squares of numbers from 1 to n, such that the \u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[38;5;124;03mith element of the returned list equals i^2.\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[38;5;124;03m\u001b[39;00m\n\u001b[1;32m      5\u001b[0m \u001b[38;5;124;03m\"\"\"\u001b[39;00m\n\u001b[1;32m      6\u001b[0m \u001b[38;5;66;03m# A comment\u001b[39;00m\n\u001b[1;32m      7\u001b[0m \u001b[38;5;66;03m# YOUR CODE HERE\u001b[39;00m\n\u001b[0;32m----> 8\u001b[0m \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mNotImplementedError\u001b[39;00m()\n",
+      "\u001b[0;31mNotImplementedError\u001b[0m: "
+     ]
+    }
+   ],
+   "source": [
+    "squares(10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "execution": {
+     "iopub.execute_input": "2023-06-05T14:13:00.065167Z",
+     "iopub.status.busy": "2023-06-05T14:13:00.059964Z",
+     "iopub.status.idle": "2023-06-05T14:13:00.089992Z",
+     "shell.execute_reply": "2023-06-05T14:13:00.089422Z"
+    },
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "8f41dd0f9c8fd2da8e8708d73e506b3a",
+     "grade": true,
+     "grade_id": "correct_squares",
+     "locked": false,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NotImplementedError",
+     "evalue": "",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNotImplementedError\u001b[0m                       Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn [3], line 2\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[38;5;124;03m\"\"\"Check that squares returns the correct output for several inputs\"\"\"\u001b[39;00m\n\u001b[0;32m----> 2\u001b[0m \u001b[38;5;28;01massert\u001b[39;00m \u001b[43msquares\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m1\u001b[39;49m\u001b[43m)\u001b[49m \u001b[38;5;241m==\u001b[39m [\u001b[38;5;241m1\u001b[39m]\n\u001b[1;32m      3\u001b[0m \u001b[38;5;28;01massert\u001b[39;00m squares(\u001b[38;5;241m2\u001b[39m) \u001b[38;5;241m==\u001b[39m [\u001b[38;5;241m1\u001b[39m, \u001b[38;5;241m4\u001b[39m]\n\u001b[1;32m      4\u001b[0m \u001b[38;5;28;01massert\u001b[39;00m squares(\u001b[38;5;241m10\u001b[39m) \u001b[38;5;241m==\u001b[39m [\u001b[38;5;241m1\u001b[39m, \u001b[38;5;241m4\u001b[39m, \u001b[38;5;241m9\u001b[39m, \u001b[38;5;241m16\u001b[39m, \u001b[38;5;241m25\u001b[39m, \u001b[38;5;241m36\u001b[39m, \u001b[38;5;241m49\u001b[39m, \u001b[38;5;241m64\u001b[39m, \u001b[38;5;241m81\u001b[39m, \u001b[38;5;241m100\u001b[39m]\n",
+      "Cell \u001b[0;32mIn [1], line 8\u001b[0m, in \u001b[0;36msquares\u001b[0;34m(n)\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[38;5;124;03m\"\"\"Compute the squares of numbers from 1 to n, such that the \u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[38;5;124;03mith element of the returned list equals i^2.\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[38;5;124;03m\u001b[39;00m\n\u001b[1;32m      5\u001b[0m \u001b[38;5;124;03m\"\"\"\u001b[39;00m\n\u001b[1;32m      6\u001b[0m \u001b[38;5;66;03m# A comment\u001b[39;00m\n\u001b[1;32m      7\u001b[0m \u001b[38;5;66;03m# YOUR CODE HERE\u001b[39;00m\n\u001b[0;32m----> 8\u001b[0m \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mNotImplementedError\u001b[39;00m()\n",
+      "\u001b[0;31mNotImplementedError\u001b[0m: "
+     ]
+    }
+   ],
+   "source": [
+    "\"\"\"Check that squares returns the correct output for several inputs\"\"\"\n",
+    "assert squares(1) == [1]\n",
+    "assert squares(2) == [1, 4]\n",
+    "assert squares(10) == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n",
+    "assert squares(11) == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "execution": {
+     "iopub.execute_input": "2023-06-05T14:13:00.093138Z",
+     "iopub.status.busy": "2023-06-05T14:13:00.092862Z",
+     "iopub.status.idle": "2023-06-05T14:13:00.111984Z",
+     "shell.execute_reply": "2023-06-05T14:13:00.111391Z"
+    },
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "23c2b667d3b60eff3be46eb3290a6b4a",
+     "grade": true,
+     "grade_id": "squares_invalid_input",
+     "locked": false,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NotImplementedError",
+     "evalue": "",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNotImplementedError\u001b[0m                       Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn [4], line 3\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[38;5;124;03m\"\"\"Check that squares raises an error for invalid inputs\"\"\"\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[38;5;28;01mtry\u001b[39;00m:\n\u001b[0;32m----> 3\u001b[0m     \u001b[43msquares\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m0\u001b[39;49m\u001b[43m)\u001b[49m\n\u001b[1;32m      4\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m \u001b[38;5;167;01mValueError\u001b[39;00m:\n\u001b[1;32m      5\u001b[0m     \u001b[38;5;28;01mpass\u001b[39;00m\n",
+      "Cell \u001b[0;32mIn [1], line 8\u001b[0m, in \u001b[0;36msquares\u001b[0;34m(n)\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[38;5;124;03m\"\"\"Compute the squares of numbers from 1 to n, such that the \u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[38;5;124;03mith element of the returned list equals i^2.\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[38;5;124;03m\u001b[39;00m\n\u001b[1;32m      5\u001b[0m \u001b[38;5;124;03m\"\"\"\u001b[39;00m\n\u001b[1;32m      6\u001b[0m \u001b[38;5;66;03m# A comment\u001b[39;00m\n\u001b[1;32m      7\u001b[0m \u001b[38;5;66;03m# YOUR CODE HERE\u001b[39;00m\n\u001b[0;32m----> 8\u001b[0m \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mNotImplementedError\u001b[39;00m()\n",
+      "\u001b[0;31mNotImplementedError\u001b[0m: "
+     ]
+    }
+   ],
+   "source": [
+    "\"\"\"Check that squares raises an error for invalid inputs\"\"\"\n",
+    "try:\n",
+    "    squares(0)\n",
+    "except ValueError:\n",
+    "    pass\n",
+    "else:\n",
+    "    raise AssertionError(\"did not raise\")\n",
+    "\n",
+    "try:\n",
+    "    squares(-4)\n",
+    "except ValueError:\n",
+    "    pass\n",
+    "else:\n",
+    "    raise AssertionError(\"did not raise\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "\n",
+    "## Part B (3 point)\n",
+    "\n",
+    "Using your `squares` function, write a function that computes the sum of the squares of the numbers from 1 to $n$. Your function should call the `squares` function -- it should NOT reimplement its functionality."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "deletable": false,
+    "execution": {
+     "iopub.execute_input": "2023-06-05T14:13:00.115190Z",
+     "iopub.status.busy": "2023-06-05T14:13:00.114931Z",
+     "iopub.status.idle": "2023-06-05T14:13:00.118074Z",
+     "shell.execute_reply": "2023-06-05T14:13:00.117548Z"
+    },
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "166e1abc6621f93f8084ec312c49f757",
+     "grade": false,
+     "grade_id": "sum_of_squares",
+     "locked": false,
+     "schema_version": 3,
+     "solution": true
+    }
+   },
+   "outputs": [],
+   "source": [
+    "def sum_of_squares(n):\n",
+    "    \"\"\"Compute the sum of the squares of numbers from 1 to n.\"\"\"\n",
+    "    # YOUR CODE HERE\n",
+    "    raise NotImplementedError()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The sum of squares from 1 to 10 should be 385. Verify that this is the answer you get:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2023-06-05T14:13:00.121215Z",
+     "iopub.status.busy": "2023-06-05T14:13:00.120804Z",
+     "iopub.status.idle": "2023-06-05T14:13:00.138232Z",
+     "shell.execute_reply": "2023-06-05T14:13:00.137599Z"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NotImplementedError",
+     "evalue": "",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNotImplementedError\u001b[0m                       Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn [6], line 1\u001b[0m\n\u001b[0;32m----> 1\u001b[0m \u001b[43msum_of_squares\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m10\u001b[39;49m\u001b[43m)\u001b[49m\n",
+      "Cell \u001b[0;32mIn [5], line 4\u001b[0m, in \u001b[0;36msum_of_squares\u001b[0;34m(n)\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[38;5;124;03m\"\"\"Compute the sum of the squares of numbers from 1 to n.\"\"\"\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[38;5;66;03m# YOUR CODE HERE\u001b[39;00m\n\u001b[0;32m----> 4\u001b[0m \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mNotImplementedError\u001b[39;00m()\n",
+      "\u001b[0;31mNotImplementedError\u001b[0m: "
+     ]
+    }
+   ],
+   "source": [
+    "sum_of_squares(10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "execution": {
+     "iopub.execute_input": "2023-06-05T14:13:00.141225Z",
+     "iopub.status.busy": "2023-06-05T14:13:00.140940Z",
+     "iopub.status.idle": "2023-06-05T14:13:00.176786Z",
+     "shell.execute_reply": "2023-06-05T14:13:00.175479Z"
+    },
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "a50921e8ef25e2f4144e1df189a9827a",
+     "grade": true,
+     "grade_id": "correct_sum_of_squares_one",
+     "locked": false,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NotImplementedError",
+     "evalue": "",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNotImplementedError\u001b[0m                       Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn [7], line 2\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[38;5;124;03m\"\"\"Check that sum_of_squares returns the correct answer for various inputs.\"\"\"\u001b[39;00m\n\u001b[0;32m----> 2\u001b[0m \u001b[38;5;28;01massert\u001b[39;00m \u001b[43msum_of_squares\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m1\u001b[39;49m\u001b[43m)\u001b[49m \u001b[38;5;241m==\u001b[39m \u001b[38;5;241m1\u001b[39m\n",
+      "Cell \u001b[0;32mIn [5], line 4\u001b[0m, in \u001b[0;36msum_of_squares\u001b[0;34m(n)\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[38;5;124;03m\"\"\"Compute the sum of the squares of numbers from 1 to n.\"\"\"\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[38;5;66;03m# YOUR CODE HERE\u001b[39;00m\n\u001b[0;32m----> 4\u001b[0m \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mNotImplementedError\u001b[39;00m()\n",
+      "\u001b[0;31mNotImplementedError\u001b[0m: "
+     ]
+    }
+   ],
+   "source": [
+    "\"\"\"Check that sum_of_squares returns the correct answer for various inputs.\"\"\"\n",
+    "assert sum_of_squares(1) == 1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "execution": {
+     "iopub.execute_input": "2023-06-05T14:13:00.181407Z",
+     "iopub.status.busy": "2023-06-05T14:13:00.181061Z",
+     "iopub.status.idle": "2023-06-05T14:13:00.199999Z",
+     "shell.execute_reply": "2023-06-05T14:13:00.199477Z"
+    },
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "0a0e6635827b459040cd1f52b7b5c8ae",
+     "grade": true,
+     "grade_id": "correct_sum_of_squares",
+     "locked": false,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NotImplementedError",
+     "evalue": "",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNotImplementedError\u001b[0m                       Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn [8], line 1\u001b[0m\n\u001b[0;32m----> 1\u001b[0m \u001b[38;5;28;01massert\u001b[39;00m \u001b[43msum_of_squares\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m2\u001b[39;49m\u001b[43m)\u001b[49m \u001b[38;5;241m==\u001b[39m \u001b[38;5;241m5\u001b[39m\n\u001b[1;32m      2\u001b[0m \u001b[38;5;66;03m### BEGIN HIDDEN TESTS\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[38;5;28;01massert\u001b[39;00m sum_of_squares(\u001b[38;5;241m10\u001b[39m) \u001b[38;5;241m==\u001b[39m \u001b[38;5;241m385\u001b[39m\n",
+      "Cell \u001b[0;32mIn [5], line 4\u001b[0m, in \u001b[0;36msum_of_squares\u001b[0;34m(n)\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[38;5;124;03m\"\"\"Compute the sum of the squares of numbers from 1 to n.\"\"\"\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[38;5;66;03m# YOUR CODE HERE\u001b[39;00m\n\u001b[0;32m----> 4\u001b[0m \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mNotImplementedError\u001b[39;00m()\n",
+      "\u001b[0;31mNotImplementedError\u001b[0m: "
+     ]
+    }
+   ],
+   "source": [
+    "assert sum_of_squares(2) == 5\n",
+    "### BEGIN HIDDEN TESTS\n",
+    "assert sum_of_squares(10) == 385\n",
+    "assert sum_of_squares(11) == 506\n",
+    "### END HIDDEN TESTS"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {
+    "deletable": false,
+    "editable": false,
+    "execution": {
+     "iopub.execute_input": "2023-06-05T14:13:00.202973Z",
+     "iopub.status.busy": "2023-06-05T14:13:00.202679Z",
+     "iopub.status.idle": "2023-06-05T14:13:00.223423Z",
+     "shell.execute_reply": "2023-06-05T14:13:00.222878Z"
+    },
+    "nbgrader": {
+     "cell_type": "code",
+     "checksum": "17c20d642d664b65246a3b50c4a766d1",
+     "grade": true,
+     "grade_id": "sum_of_squares_uses_squares",
+     "locked": false,
+     "points": 1,
+     "schema_version": 3,
+     "solution": false
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NotImplementedError",
+     "evalue": "",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNotImplementedError\u001b[0m                       Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn [9], line 5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[38;5;28;01mdel\u001b[39;00m squares\n\u001b[1;32m      4\u001b[0m \u001b[38;5;28;01mtry\u001b[39;00m:\n\u001b[0;32m----> 5\u001b[0m     \u001b[43msum_of_squares\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m1\u001b[39;49m\u001b[43m)\u001b[49m\n\u001b[1;32m      6\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m \u001b[38;5;167;01mNameError\u001b[39;00m:\n\u001b[1;32m      7\u001b[0m     \u001b[38;5;28;01mpass\u001b[39;00m\n",
+      "Cell \u001b[0;32mIn [5], line 4\u001b[0m, in \u001b[0;36msum_of_squares\u001b[0;34m(n)\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[38;5;124;03m\"\"\"Compute the sum of the squares of numbers from 1 to n.\"\"\"\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[38;5;66;03m# YOUR CODE HERE\u001b[39;00m\n\u001b[0;32m----> 4\u001b[0m \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mNotImplementedError\u001b[39;00m()\n",
+      "\u001b[0;31mNotImplementedError\u001b[0m: "
+     ]
+    }
+   ],
+   "source": [
+    "\"\"\"Check that sum_of_squares relies on squares.\"\"\"\n",
+    "orig_squares = squares\n",
+    "del squares\n",
+    "try:\n",
+    "    sum_of_squares(1)\n",
+    "except NameError:\n",
+    "    pass\n",
+    "else:\n",
+    "    raise AssertionError(\"sum_of_squares does not use squares\")\n",
+    "finally:\n",
+    "    squares = orig_squares"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
+Arguments received by post_grade_hook:
+nb_path: /home/jovyan/autograder/assignments/autograded/test_case_1/assignment1/assignment1.ipynb
+assignment: assignment1
+score: 0.0
+Graded submitted notebook looks like:
+{'cells': [{'cell_type': 'markdown', 'metadata': {'deletable': False, 'editable': False, 'nbgrader': {'cell_type': 'markdown', 'checksum': '54357180eb986d05b0af250338fed58d', 'grade': False, 'grade_id': 'jupyter', 'locked': True, 'schema_version': 3, 'solution': False}}, 'source': "For this problem set, we'll be using the Jupyter notebook:\n\n![](assets/jupyter.png)"}, {'cell_type': 'markdown', 'metadata': {}, 'source': '---\n## Part A (2 points)\n\nWrite a function that returns a list of numbers, such that $x_i=i^2$, for $1\\leq i \\leq n$. Make sure it handles the case where $n<1$ by raising a `ValueError`.'}, {'cell_type': 'code', 'execution_count': 1, 'metadata': {'deletable': False, 'execution': {'iopub.execute_input': '2023-06-05T14:12:59.515726Z', 'iopub.status.busy': '2023-06-05T14:12:59.515423Z', 'iopub.status.idle': '2023-06-05T14:12:59.522582Z', 'shell.execute_reply': '2023-06-05T14:12:59.521931Z'}, 'nbgrader': {'cell_type': 'code', 'checksum': 'c489054c37ce904027af8b23fd09e5b9', 'grade': False, 'grade_id': 'squares', 'locked': False, 'schema_version': 3, 'solution': True}}, 'outputs': [], 'source': 'def squares(n):\n    """Compute the squares of numbers from 1 to n, such that the \n    ith element of the returned list equals i^2.\n    \n    """\n    # A comment\n    # YOUR CODE HERE\n    raise NotImplementedError()'}, {'cell_type': 'markdown', 'metadata': {}, 'source': 'Your function should print `[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]` for $n=10$. Check that it does:'}, {'cell_type': 'code', 'execution_count': 2, 'metadata': {'execution': {'iopub.execute_input': '2023-06-05T14:12:59.526133Z', 'iopub.status.busy': '2023-06-05T14:12:59.525830Z', 'iopub.status.idle': '2023-06-05T14:13:00.021007Z', 'shell.execute_reply': '2023-06-05T14:13:00.020272Z'}}, 'outputs': [{'ename': 'NotImplementedError', 'evalue': '', 'output_type': 'error', 'traceback': ['\x1b[0;31m---------------------------------------------------------------------------\x1b[0m', '\x1b[0;31mNotImplementedError\x1b[0m                       Traceback (most recent call last)', 'Cell \x1b[0;32mIn [2], line 1\x1b[0m\n\x1b[0;32m----> 1\x1b[0m \x1b[43msquares\x1b[49m\x1b[43m(\x1b[49m\x1b[38;5;241;43m10\x1b[39;49m\x1b[43m)\x1b[49m\n', 'Cell \x1b[0;32mIn [1], line 8\x1b[0m, in \x1b[0;36msquares\x1b[0;34m(n)\x1b[0m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;124;03m"""Compute the squares of numbers from 1 to n, such that the \x1b[39;00m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;124;03mith element of the returned list equals i^2.\x1b[39;00m\n\x1b[1;32m      4\x1b[0m \x1b[38;5;124;03m\x1b[39;00m\n\x1b[1;32m      5\x1b[0m \x1b[38;5;124;03m"""\x1b[39;00m\n\x1b[1;32m      6\x1b[0m \x1b[38;5;66;03m# A comment\x1b[39;00m\n\x1b[1;32m      7\x1b[0m \x1b[38;5;66;03m# YOUR CODE HERE\x1b[39;00m\n\x1b[0;32m----> 8\x1b[0m \x1b[38;5;28;01mraise\x1b[39;00m \x1b[38;5;167;01mNotImplementedError\x1b[39;00m()\n', '\x1b[0;31mNotImplementedError\x1b[0m: ']}], 'source': 'squares(10)'}, {'cell_type': 'code', 'execution_count': 3, 'metadata': {'deletable': False, 'editable': False, 'execution': {'iopub.execute_input': '2023-06-05T14:13:00.065167Z', 'iopub.status.busy': '2023-06-05T14:13:00.059964Z', 'iopub.status.idle': '2023-06-05T14:13:00.089992Z', 'shell.execute_reply': '2023-06-05T14:13:00.089422Z'}, 'nbgrader': {'cell_type': 'code', 'checksum': '8f41dd0f9c8fd2da8e8708d73e506b3a', 'grade': True, 'grade_id': 'correct_squares', 'locked': False, 'points': 1, 'schema_version': 3, 'solution': False}}, 'outputs': [{'ename': 'NotImplementedError', 'evalue': '', 'output_type': 'error', 'traceback': ['\x1b[0;31m---------------------------------------------------------------------------\x1b[0m', '\x1b[0;31mNotImplementedError\x1b[0m                       Traceback (most recent call last)', 'Cell \x1b[0;32mIn [3], line 2\x1b[0m\n\x1b[1;32m      1\x1b[0m \x1b[38;5;124;03m"""Check that squares returns the correct output for several inputs"""\x1b[39;00m\n\x1b[0;32m----> 2\x1b[0m \x1b[38;5;28;01massert\x1b[39;00m \x1b[43msquares\x1b[49m\x1b[43m(\x1b[49m\x1b[38;5;241;43m1\x1b[39;49m\x1b[43m)\x1b[49m \x1b[38;5;241m==\x1b[39m [\x1b[38;5;241m1\x1b[39m]\n\x1b[1;32m      3\x1b[0m \x1b[38;5;28;01massert\x1b[39;00m squares(\x1b[38;5;241m2\x1b[39m) \x1b[38;5;241m==\x1b[39m [\x1b[38;5;241m1\x1b[39m, \x1b[38;5;241m4\x1b[39m]\n\x1b[1;32m      4\x1b[0m \x1b[38;5;28;01massert\x1b[39;00m squares(\x1b[38;5;241m10\x1b[39m) \x1b[38;5;241m==\x1b[39m [\x1b[38;5;241m1\x1b[39m, \x1b[38;5;241m4\x1b[39m, \x1b[38;5;241m9\x1b[39m, \x1b[38;5;241m16\x1b[39m, \x1b[38;5;241m25\x1b[39m, \x1b[38;5;241m36\x1b[39m, \x1b[38;5;241m49\x1b[39m, \x1b[38;5;241m64\x1b[39m, \x1b[38;5;241m81\x1b[39m, \x1b[38;5;241m100\x1b[39m]\n', 'Cell \x1b[0;32mIn [1], line 8\x1b[0m, in \x1b[0;36msquares\x1b[0;34m(n)\x1b[0m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;124;03m"""Compute the squares of numbers from 1 to n, such that the \x1b[39;00m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;124;03mith element of the returned list equals i^2.\x1b[39;00m\n\x1b[1;32m      4\x1b[0m \x1b[38;5;124;03m\x1b[39;00m\n\x1b[1;32m      5\x1b[0m \x1b[38;5;124;03m"""\x1b[39;00m\n\x1b[1;32m      6\x1b[0m \x1b[38;5;66;03m# A comment\x1b[39;00m\n\x1b[1;32m      7\x1b[0m \x1b[38;5;66;03m# YOUR CODE HERE\x1b[39;00m\n\x1b[0;32m----> 8\x1b[0m \x1b[38;5;28;01mraise\x1b[39;00m \x1b[38;5;167;01mNotImplementedError\x1b[39;00m()\n', '\x1b[0;31mNotImplementedError\x1b[0m: ']}], 'source': '"""Check that squares returns the correct output for several inputs"""\nassert squares(1) == [1]\nassert squares(2) == [1, 4]\nassert squares(10) == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\nassert squares(11) == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121]'}, {'cell_type': 'code', 'execution_count': 4, 'metadata': {'deletable': False, 'editable': False, 'execution': {'iopub.execute_input': '2023-06-05T14:13:00.093138Z', 'iopub.status.busy': '2023-06-05T14:13:00.092862Z', 'iopub.status.idle': '2023-06-05T14:13:00.111984Z', 'shell.execute_reply': '2023-06-05T14:13:00.111391Z'}, 'nbgrader': {'cell_type': 'code', 'checksum': '23c2b667d3b60eff3be46eb3290a6b4a', 'grade': True, 'grade_id': 'squares_invalid_input', 'locked': False, 'points': 1, 'schema_version': 3, 'solution': False}}, 'outputs': [{'ename': 'NotImplementedError', 'evalue': '', 'output_type': 'error', 'traceback': ['\x1b[0;31m---------------------------------------------------------------------------\x1b[0m', '\x1b[0;31mNotImplementedError\x1b[0m                       Traceback (most recent call last)', 'Cell \x1b[0;32mIn [4], line 3\x1b[0m\n\x1b[1;32m      1\x1b[0m \x1b[38;5;124;03m"""Check that squares raises an error for invalid inputs"""\x1b[39;00m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;28;01mtry\x1b[39;00m:\n\x1b[0;32m----> 3\x1b[0m     \x1b[43msquares\x1b[49m\x1b[43m(\x1b[49m\x1b[38;5;241;43m0\x1b[39;49m\x1b[43m)\x1b[49m\n\x1b[1;32m      4\x1b[0m \x1b[38;5;28;01mexcept\x1b[39;00m \x1b[38;5;167;01mValueError\x1b[39;00m:\n\x1b[1;32m      5\x1b[0m     \x1b[38;5;28;01mpass\x1b[39;00m\n', 'Cell \x1b[0;32mIn [1], line 8\x1b[0m, in \x1b[0;36msquares\x1b[0;34m(n)\x1b[0m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;124;03m"""Compute the squares of numbers from 1 to n, such that the \x1b[39;00m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;124;03mith element of the returned list equals i^2.\x1b[39;00m\n\x1b[1;32m      4\x1b[0m \x1b[38;5;124;03m\x1b[39;00m\n\x1b[1;32m      5\x1b[0m \x1b[38;5;124;03m"""\x1b[39;00m\n\x1b[1;32m      6\x1b[0m \x1b[38;5;66;03m# A comment\x1b[39;00m\n\x1b[1;32m      7\x1b[0m \x1b[38;5;66;03m# YOUR CODE HERE\x1b[39;00m\n\x1b[0;32m----> 8\x1b[0m \x1b[38;5;28;01mraise\x1b[39;00m \x1b[38;5;167;01mNotImplementedError\x1b[39;00m()\n', '\x1b[0;31mNotImplementedError\x1b[0m: ']}], 'source': '"""Check that squares raises an error for invalid inputs"""\ntry:\n    squares(0)\nexcept ValueError:\n    pass\nelse:\n    raise AssertionError("did not raise")\n\ntry:\n    squares(-4)\nexcept ValueError:\n    pass\nelse:\n    raise AssertionError("did not raise")'}, {'cell_type': 'markdown', 'metadata': {}, 'source': '---\n\n## Part B (3 point)\n\nUsing your `squares` function, write a function that computes the sum of the squares of the numbers from 1 to $n$. Your function should call the `squares` function -- it should NOT reimplement its functionality.'}, {'cell_type': 'code', 'execution_count': 5, 'metadata': {'deletable': False, 'execution': {'iopub.execute_input': '2023-06-05T14:13:00.115190Z', 'iopub.status.busy': '2023-06-05T14:13:00.114931Z', 'iopub.status.idle': '2023-06-05T14:13:00.118074Z', 'shell.execute_reply': '2023-06-05T14:13:00.117548Z'}, 'nbgrader': {'cell_type': 'code', 'checksum': '166e1abc6621f93f8084ec312c49f757', 'grade': False, 'grade_id': 'sum_of_squares', 'locked': False, 'schema_version': 3, 'solution': True}}, 'outputs': [], 'source': 'def sum_of_squares(n):\n    """Compute the sum of the squares of numbers from 1 to n."""\n    # YOUR CODE HERE\n    raise NotImplementedError()'}, {'cell_type': 'markdown', 'metadata': {}, 'source': 'The sum of squares from 1 to 10 should be 385. Verify that this is the answer you get:'}, {'cell_type': 'code', 'execution_count': 6, 'metadata': {'execution': {'iopub.execute_input': '2023-06-05T14:13:00.121215Z', 'iopub.status.busy': '2023-06-05T14:13:00.120804Z', 'iopub.status.idle': '2023-06-05T14:13:00.138232Z', 'shell.execute_reply': '2023-06-05T14:13:00.137599Z'}}, 'outputs': [{'ename': 'NotImplementedError', 'evalue': '', 'output_type': 'error', 'traceback': ['\x1b[0;31m---------------------------------------------------------------------------\x1b[0m', '\x1b[0;31mNotImplementedError\x1b[0m                       Traceback (most recent call last)', 'Cell \x1b[0;32mIn [6], line 1\x1b[0m\n\x1b[0;32m----> 1\x1b[0m \x1b[43msum_of_squares\x1b[49m\x1b[43m(\x1b[49m\x1b[38;5;241;43m10\x1b[39;49m\x1b[43m)\x1b[49m\n', 'Cell \x1b[0;32mIn [5], line 4\x1b[0m, in \x1b[0;36msum_of_squares\x1b[0;34m(n)\x1b[0m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;124;03m"""Compute the sum of the squares of numbers from 1 to n."""\x1b[39;00m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;66;03m# YOUR CODE HERE\x1b[39;00m\n\x1b[0;32m----> 4\x1b[0m \x1b[38;5;28;01mraise\x1b[39;00m \x1b[38;5;167;01mNotImplementedError\x1b[39;00m()\n', '\x1b[0;31mNotImplementedError\x1b[0m: ']}], 'source': 'sum_of_squares(10)'}, {'cell_type': 'code', 'execution_count': 7, 'metadata': {'deletable': False, 'editable': False, 'execution': {'iopub.execute_input': '2023-06-05T14:13:00.141225Z', 'iopub.status.busy': '2023-06-05T14:13:00.140940Z', 'iopub.status.idle': '2023-06-05T14:13:00.176786Z', 'shell.execute_reply': '2023-06-05T14:13:00.175479Z'}, 'nbgrader': {'cell_type': 'code', 'checksum': 'a50921e8ef25e2f4144e1df189a9827a', 'grade': True, 'grade_id': 'correct_sum_of_squares_one', 'locked': False, 'points': 1, 'schema_version': 3, 'solution': False}}, 'outputs': [{'ename': 'NotImplementedError', 'evalue': '', 'output_type': 'error', 'traceback': ['\x1b[0;31m---------------------------------------------------------------------------\x1b[0m', '\x1b[0;31mNotImplementedError\x1b[0m                       Traceback (most recent call last)', 'Cell \x1b[0;32mIn [7], line 2\x1b[0m\n\x1b[1;32m      1\x1b[0m \x1b[38;5;124;03m"""Check that sum_of_squares returns the correct answer for various inputs."""\x1b[39;00m\n\x1b[0;32m----> 2\x1b[0m \x1b[38;5;28;01massert\x1b[39;00m \x1b[43msum_of_squares\x1b[49m\x1b[43m(\x1b[49m\x1b[38;5;241;43m1\x1b[39;49m\x1b[43m)\x1b[49m \x1b[38;5;241m==\x1b[39m \x1b[38;5;241m1\x1b[39m\n', 'Cell \x1b[0;32mIn [5], line 4\x1b[0m, in \x1b[0;36msum_of_squares\x1b[0;34m(n)\x1b[0m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;124;03m"""Compute the sum of the squares of numbers from 1 to n."""\x1b[39;00m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;66;03m# YOUR CODE HERE\x1b[39;00m\n\x1b[0;32m----> 4\x1b[0m \x1b[38;5;28;01mraise\x1b[39;00m \x1b[38;5;167;01mNotImplementedError\x1b[39;00m()\n', '\x1b[0;31mNotImplementedError\x1b[0m: ']}], 'source': '"""Check that sum_of_squares returns the correct answer for various inputs."""\nassert sum_of_squares(1) == 1'}, {'cell_type': 'code', 'execution_count': 8, 'metadata': {'deletable': False, 'editable': False, 'execution': {'iopub.execute_input': '2023-06-05T14:13:00.181407Z', 'iopub.status.busy': '2023-06-05T14:13:00.181061Z', 'iopub.status.idle': '2023-06-05T14:13:00.199999Z', 'shell.execute_reply': '2023-06-05T14:13:00.199477Z'}, 'nbgrader': {'cell_type': 'code', 'checksum': '0a0e6635827b459040cd1f52b7b5c8ae', 'grade': True, 'grade_id': 'correct_sum_of_squares', 'locked': False, 'points': 1, 'schema_version': 3, 'solution': False}}, 'outputs': [{'ename': 'NotImplementedError', 'evalue': '', 'output_type': 'error', 'traceback': ['\x1b[0;31m---------------------------------------------------------------------------\x1b[0m', '\x1b[0;31mNotImplementedError\x1b[0m                       Traceback (most recent call last)', 'Cell \x1b[0;32mIn [8], line 1\x1b[0m\n\x1b[0;32m----> 1\x1b[0m \x1b[38;5;28;01massert\x1b[39;00m \x1b[43msum_of_squares\x1b[49m\x1b[43m(\x1b[49m\x1b[38;5;241;43m2\x1b[39;49m\x1b[43m)\x1b[49m \x1b[38;5;241m==\x1b[39m \x1b[38;5;241m5\x1b[39m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;66;03m### BEGIN HIDDEN TESTS\x1b[39;00m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;28;01massert\x1b[39;00m sum_of_squares(\x1b[38;5;241m10\x1b[39m) \x1b[38;5;241m==\x1b[39m \x1b[38;5;241m385\x1b[39m\n', 'Cell \x1b[0;32mIn [5], line 4\x1b[0m, in \x1b[0;36msum_of_squares\x1b[0;34m(n)\x1b[0m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;124;03m"""Compute the sum of the squares of numbers from 1 to n."""\x1b[39;00m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;66;03m# YOUR CODE HERE\x1b[39;00m\n\x1b[0;32m----> 4\x1b[0m \x1b[38;5;28;01mraise\x1b[39;00m \x1b[38;5;167;01mNotImplementedError\x1b[39;00m()\n', '\x1b[0;31mNotImplementedError\x1b[0m: ']}], 'source': 'assert sum_of_squares(2) == 5\n### BEGIN HIDDEN TESTS\nassert sum_of_squares(10) == 385\nassert sum_of_squares(11) == 506\n### END HIDDEN TESTS'}, {'cell_type': 'code', 'execution_count': 9, 'metadata': {'deletable': False, 'editable': False, 'execution': {'iopub.execute_input': '2023-06-05T14:13:00.202973Z', 'iopub.status.busy': '2023-06-05T14:13:00.202679Z', 'iopub.status.idle': '2023-06-05T14:13:00.223423Z', 'shell.execute_reply': '2023-06-05T14:13:00.222878Z'}, 'nbgrader': {'cell_type': 'code', 'checksum': '17c20d642d664b65246a3b50c4a766d1', 'grade': True, 'grade_id': 'sum_of_squares_uses_squares', 'locked': False, 'points': 1, 'schema_version': 3, 'solution': False}}, 'outputs': [{'ename': 'NotImplementedError', 'evalue': '', 'output_type': 'error', 'traceback': ['\x1b[0;31m---------------------------------------------------------------------------\x1b[0m', '\x1b[0;31mNotImplementedError\x1b[0m                       Traceback (most recent call last)', 'Cell \x1b[0;32mIn [9], line 5\x1b[0m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;28;01mdel\x1b[39;00m squares\n\x1b[1;32m      4\x1b[0m \x1b[38;5;28;01mtry\x1b[39;00m:\n\x1b[0;32m----> 5\x1b[0m     \x1b[43msum_of_squares\x1b[49m\x1b[43m(\x1b[49m\x1b[38;5;241;43m1\x1b[39;49m\x1b[43m)\x1b[49m\n\x1b[1;32m      6\x1b[0m \x1b[38;5;28;01mexcept\x1b[39;00m \x1b[38;5;167;01mNameError\x1b[39;00m:\n\x1b[1;32m      7\x1b[0m     \x1b[38;5;28;01mpass\x1b[39;00m\n', 'Cell \x1b[0;32mIn [5], line 4\x1b[0m, in \x1b[0;36msum_of_squares\x1b[0;34m(n)\x1b[0m\n\x1b[1;32m      2\x1b[0m \x1b[38;5;124;03m"""Compute the sum of the squares of numbers from 1 to n."""\x1b[39;00m\n\x1b[1;32m      3\x1b[0m \x1b[38;5;66;03m# YOUR CODE HERE\x1b[39;00m\n\x1b[0;32m----> 4\x1b[0m \x1b[38;5;28;01mraise\x1b[39;00m \x1b[38;5;167;01mNotImplementedError\x1b[39;00m()\n', '\x1b[0;31mNotImplementedError\x1b[0m: ']}], 'source': '"""Check that sum_of_squares relies on squares."""\norig_squares = squares\ndel squares\ntry:\n    sum_of_squares(1)\nexcept NameError:\n    pass\nelse:\n    raise AssertionError("sum_of_squares does not use squares")\nfinally:\n    squares = orig_squares'}], 'metadata': {'kernelspec': {'display_name': 'Python 3 (ipykernel)', 'language': 'python', 'name': 'python3'}, 'language_info': {'codemirror_mode': {'name': 'ipython', 'version': 3}, 'file_extension': '.py', 'mimetype': 'text/x-python', 'name': 'python', 'nbconvert_exporter': 'python', 'pygments_lexer': 'ipython3', 'version': '3.9.13'}}, 'nbformat': 4, 'nbformat_minor': 4}
+OS environment variables:
+SHELL: /bin/bash
+PART_TITLE: Test part
+AWS_EXECUTION_ENV: AWS_ECS_EC2
+courseraPartMaxScore: 100
+IMAGE_DIGEST: acbb72ac7b9c
+HOSTNAME: ip-10-2-111-213.ec2.internal
+PYTHON_VERSION: 
+LANGUAGE: en_US.UTF-8
+MADS_NOTEBOOK_COMMIT: 7919724
+NB_UID: 1000
+OP: Read
+ECS_CONTAINER_METADATA_FILE: /opt/ecs/metadata/02c767df-2f92-43d3-a239-1c486c2f4f4b/ecs-container-metadata.json
+DOCKER_STACKS_JUPYTER_CMD: lab
+PWD: /home/jovyan/autograder/assignments
+ECS_CONTAINER_METADATA_URI_V4: http://169.254.170.2/v4/3e89b747-094d-46f6-8d86-4ebd91d9a839
+REPO_NAME: etc_autograder
+userId: 111521101
+HOME: /home/jovyan
+LANG: en_US.UTF-8
+MAMBA_NO_BANNER: 1
+NB_GID: 100
+JUPYTERHUB_SINGLEUSER_APP: jupyter_server.serverapp.ServerApp
+XDG_CACHE_HOME: /home/jovyan/.cache/
+PACKAGE_VERSION: v1.15.060523
+ECS_CONTAINER_METADATA_URI: http://169.254.170.2/v3/3e89b747-094d-46f6-8d86-4ebd91d9a839
+SHLVL: 1
+CONDA_DIR: /opt/conda
+filename: assignment1-assignment1
+NB_USER: jovyan
+LC_ALL: en_US.UTF-8
+PATH: /opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+DEBIAN_FRONTEND: noninteractive
+partId: Vf0Cr
+_: /opt/conda/bin/python
+PYTHONWARNINGS: ignore
+[DEBUG] Starting new HTTPS connection (1): svvnsrnuv0.execute-api.us-east-1.amazonaws.com:443
+[DEBUG] https://svvnsrnuv0.execute-api.us-east-1.amazonaws.com:443 "POST /prod/autograder-logger-bucket HTTP/1.1" 200 0
+[INFO] ----------------------------
+[INFO] This logging means post_grade_hook ends
+[INFO] ----------------------------
+[INFO] Hook post_grade completed successfully!
+[DEBUG] ----------------------------
+[DEBUG] 
+[DEBUG] 
+[DEBUG] ----------------------------
+[DEBUG] Calling generate_feedback()
+[DEBUG] ----------------------------
+[WARNING] Config option `display_data_priority` not recognized by `ClearHiddenTests`.
+[WARNING] Config option `display_data_priority` not recognized by `StripHiddenTracebacks`.
+[INFO] Copying /home/jovyan/autograder/assignments/autograded/test_case_1/assignment1/assets/jupyter.png -> /home/jovyan/autograder/assignments/feedback/test_case_1/assignment1/assets/jupyter.png
+[INFO] Converting notebook /home/jovyan/autograder/assignments/autograded/test_case_1/assignment1/assignment1.ipynb
+[DEBUG] Student: test_case_1
+[DEBUG] Assignment: assignment1
+[DEBUG] Notebook: assignment1
+[DEBUG] Template paths:
+	/opt/conda/lib/python3.9/site-packages/nbgrader/server_extensions/formgrader/templates/feedback
+	/opt/conda/share/jupyter/nbconvert/templates/classic
+	/opt/conda/share/jupyter/nbconvert/templates/base
+	/home/jovyan/.local/share/jupyter
+	/home/jovyan/.local/share/jupyter/nbconvert/templates
+	/home/jovyan/.local/share/jupyter/nbconvert/templates/compatibility
+	/opt/conda/share/jupyter
+	/opt/conda/share/jupyter/nbconvert/templates
+	/opt/conda/share/jupyter/nbconvert/templates/compatibility
+	/usr/local/share/jupyter
+	/usr/local/share/jupyter/nbconvert/templates
+	/usr/local/share/jupyter/nbconvert/templates/compatibility
+	/usr/share/jupyter
+	/usr/share/jupyter/nbconvert/templates
+	/usr/share/jupyter/nbconvert/templates/compatibility
+	/home/jovyan/autograder/assignments
+	/home/jovyan/autograder/assignments
+	/opt/conda/lib/python3.9/site-packages/nbgrader/server_extensions/formgrader/templates
+	/opt/conda/lib/python3.9/site-packages/nbgrader/server_extensions/formgrader/static/components/bootstrap/css
+	/opt/conda/share/jupyter/nbconvert/templates
+[DEBUG] Applying preprocessor: CSSHTMLHeaderPreprocessor
+[DEBUG] Applying preprocessor: GetGrades
+[DEBUG] Applying preprocessor: ClearHiddenTests
+[DEBUG] Applying preprocessor: StripHiddenTracebacks
+[DEBUG] Attempting to load template mads-feedback.html.j2
+[DEBUG]     template_paths: /opt/conda/lib/python3.9/site-packages/nbgrader/server_extensions/formgrader/templates/feedback:/opt/conda/share/jupyter/nbconvert/templates/classic:/opt/conda/share/jupyter/nbconvert/templates/base:/home/jovyan/.local/share/jupyter:/home/jovyan/.local/share/jupyter/nbconvert/templates:/home/jovyan/.local/share/jupyter/nbconvert/templates/compatibility:/opt/conda/share/jupyter:/opt/conda/share/jupyter/nbconvert/templates:/opt/conda/share/jupyter/nbconvert/templates/compatibility:/usr/local/share/jupyter:/usr/local/share/jupyter/nbconvert/templates:/usr/local/share/jupyter/nbconvert/templates/compatibility:/usr/share/jupyter:/usr/share/jupyter/nbconvert/templates:/usr/share/jupyter/nbconvert/templates/compatibility:/home/jovyan/autograder/assignments:/home/jovyan/autograder/assignments:/opt/conda/lib/python3.9/site-packages/nbgrader/server_extensions/formgrader/templates:/opt/conda/lib/python3.9/site-packages/nbgrader/server_extensions/formgrader/static/components/bootstrap/css:/opt/conda/share/jupyter/nbconvert/templates
+[INFO] Writing 145013 bytes to /home/jovyan/autograder/assignments/feedback/test_case_1/assignment1/assignment1.html
+[INFO] Setting destination file permissions to 644
+[INFO] Feedback has been generated successfully
+[INFO] Copying HTML feedback from feedback/test_case_1/assignment1/assignment1.html to /shared/htmlFeedback.html
+[INFO] Feedback written to /shared/feedback.json: {'fractionalScore': 0.0, 'feedback': 'View the HTML feedback for details.\nIf this feedback is not helpful, please contact your instructor. They will have access to the full autograder logs which contain more detail.', 'feedbackType': 'HTML'}
+[DEBUG] ----------------------------
+[DEBUG] 
+[DEBUG] 
+[DEBUG] ----------------------------
+[DEBUG] Calling run_hook('feedback')
+[DEBUG] ----------------------------
+[INFO] No function `feedback_hook` found
+[DEBUG] ----------------------------
+[DEBUG] 
+[DEBUG] 
